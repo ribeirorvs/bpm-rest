@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_AQIzgASzEeqd1c1oPl_MIg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_It3NwASzEeqd1c1oPl_MIg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_resulteItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__CBBD4108-B4B2-4313-9B0E-D6BF242B7634_ContentDataInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__CBBD4108-B4B2-4313-9B0E-D6BF242B7634_MethodInputXItem" structureRef="String"/>
@@ -35,54 +35,57 @@
         <drools:onEntry-script scriptFormat="http://www.java.com/java">
           <drools:script><![CDATA[System.out.println("Start REST task");]]></drools:script>
         </drools:onEntry-script>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[System.out.println("End REST task");]]></drools:script>
+        </drools:onExit-script>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_41F01FC7-4991-4DAA-A966-FD370206E246</bpmn2:incoming>
       <bpmn2:outgoing>_B5A4AB4B-3751-46DD-B369-B685E106F84D</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_AQKBoASzEeqd1c1oPl_MIg">
+      <bpmn2:ioSpecification id="_It3NwQSzEeqd1c1oPl_MIg">
         <bpmn2:dataInput id="_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_ContentDataInputX" drools:dtype="String" itemSubjectRef="__CBBD4108-B4B2-4313-9B0E-D6BF242B7634_ContentDataInputXItem" name="ContentData"/>
         <bpmn2:dataInput id="_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_MethodInputX" drools:dtype="String" itemSubjectRef="__CBBD4108-B4B2-4313-9B0E-D6BF242B7634_MethodInputXItem" name="Method"/>
         <bpmn2:dataInput id="_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_UrlInputX" drools:dtype="String" itemSubjectRef="__CBBD4108-B4B2-4313-9B0E-D6BF242B7634_UrlInputXItem" name="Url"/>
         <bpmn2:dataInput id="_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_TaskNameInputX" drools:dtype="Object" name="TaskName"/>
         <bpmn2:dataOutput id="_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_ResultOutputX" drools:dtype="Object" itemSubjectRef="__CBBD4108-B4B2-4313-9B0E-D6BF242B7634_ResultOutputXItem" name="Result"/>
-        <bpmn2:inputSet id="_AQKBoQSzEeqd1c1oPl_MIg">
+        <bpmn2:inputSet id="_It3NwgSzEeqd1c1oPl_MIg">
           <bpmn2:dataInputRefs>_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_ContentDataInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_MethodInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_UrlInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_AQKBogSzEeqd1c1oPl_MIg">
+        <bpmn2:outputSet id="_It3NwwSzEeqd1c1oPl_MIg">
           <bpmn2:dataOutputRefs>_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_ResultOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_AQKBowSzEeqd1c1oPl_MIg">
+      <bpmn2:dataInputAssociation id="_It3NxASzEeqd1c1oPl_MIg">
         <bpmn2:targetRef>_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_ContentDataInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_AQKBpASzEeqd1c1oPl_MIg">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_AQKBpQSzEeqd1c1oPl_MIg"><![CDATA[application/json]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_AQKBpgSzEeqd1c1oPl_MIg">_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_ContentDataInputX</bpmn2:to>
+        <bpmn2:assignment id="_It3NxQSzEeqd1c1oPl_MIg">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_It3NxgSzEeqd1c1oPl_MIg"><![CDATA[application/json]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_It3NxwSzEeqd1c1oPl_MIg">_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_ContentDataInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_AQKBpwSzEeqd1c1oPl_MIg">
+      <bpmn2:dataInputAssociation id="_It3NyASzEeqd1c1oPl_MIg">
         <bpmn2:targetRef>_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_MethodInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_AQKBqASzEeqd1c1oPl_MIg">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_AQKBqQSzEeqd1c1oPl_MIg"><![CDATA[GET]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_AQKBqgSzEeqd1c1oPl_MIg">_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_MethodInputX</bpmn2:to>
+        <bpmn2:assignment id="_It3NyQSzEeqd1c1oPl_MIg">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_It3NygSzEeqd1c1oPl_MIg"><![CDATA[GET]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_It3NywSzEeqd1c1oPl_MIg">_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_MethodInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_AQKBqwSzEeqd1c1oPl_MIg">
+      <bpmn2:dataInputAssociation id="_It3NzASzEeqd1c1oPl_MIg">
         <bpmn2:targetRef>_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_UrlInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_AQKBrASzEeqd1c1oPl_MIg">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_AQKBrQSzEeqd1c1oPl_MIg"><![CDATA[https://jsonplaceholder.typicode.com/posts/1]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_AQKBrgSzEeqd1c1oPl_MIg">_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_UrlInputX</bpmn2:to>
+        <bpmn2:assignment id="_It3NzQSzEeqd1c1oPl_MIg">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_It3NzgSzEeqd1c1oPl_MIg"><![CDATA[https://jsonplaceholder.typicode.com/posts/1]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_It3NzwSzEeqd1c1oPl_MIg">_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_UrlInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_AQKBrwSzEeqd1c1oPl_MIg">
+      <bpmn2:dataInputAssociation id="_It3N0ASzEeqd1c1oPl_MIg">
         <bpmn2:targetRef>_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_AQKBsASzEeqd1c1oPl_MIg">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_AQKBsQSzEeqd1c1oPl_MIg"><![CDATA[Rest]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_AQKBsgSzEeqd1c1oPl_MIg">_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_It3N0QSzEeqd1c1oPl_MIg">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_It3N0gSzEeqd1c1oPl_MIg"><![CDATA[Rest]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_It3N0wSzEeqd1c1oPl_MIg">_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_AQKBswSzEeqd1c1oPl_MIg">
+      <bpmn2:dataOutputAssociation id="_It3N1ASzEeqd1c1oPl_MIg">
         <bpmn2:sourceRef>_CBBD4108-B4B2-4313-9B0E-D6BF242B7634_ResultOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>resulte</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
@@ -94,8 +97,8 @@
       <bpmn2:incoming>_B5A4AB4B-3751-46DD-B369-B685E106F84D</bpmn2:incoming>
     </bpmn2:endEvent>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_AQKBtASzEeqd1c1oPl_MIg">
-    <bpmndi:BPMNPlane id="_AQKBtQSzEeqd1c1oPl_MIg" bpmnElement="reproducer.process">
+  <bpmndi:BPMNDiagram id="_It300ASzEeqd1c1oPl_MIg">
+    <bpmndi:BPMNPlane id="_It300QSzEeqd1c1oPl_MIg" bpmnElement="reproducer.process">
       <bpmndi:BPMNShape id="shape__FD71F43F-F25C-4275-989B-F09288B78A91" bpmnElement="_FD71F43F-F25C-4275-989B-F09288B78A91">
         <dc:Bounds height="56.0" width="56.0" x="607.0" y="81.0"/>
       </bpmndi:BPMNShape>
@@ -115,19 +118,19 @@
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_AQKBtgSzEeqd1c1oPl_MIg" type="BPSimData">
+  <bpmn2:relationship id="_It300gSzEeqd1c1oPl_MIg" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_1203704C-DB91-4C73-BF4C-24C4E409262F" id="_AQKBtwSzEeqd1c1oPl_MIg">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_1203704C-DB91-4C73-BF4C-24C4E409262F" id="_It300wSzEeqd1c1oPl_MIg">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
               </bpsim:ProcessingTime>
             </bpsim:TimeParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_CBBD4108-B4B2-4313-9B0E-D6BF242B7634" id="_AQKBuASzEeqd1c1oPl_MIg">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_CBBD4108-B4B2-4313-9B0E-D6BF242B7634" id="_It301ASzEeqd1c1oPl_MIg">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -150,7 +153,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_AQIzgASzEeqd1c1oPl_MIg</bpmn2:source>
-    <bpmn2:target>_AQIzgASzEeqd1c1oPl_MIg</bpmn2:target>
+    <bpmn2:source>_It3NwASzEeqd1c1oPl_MIg</bpmn2:source>
+    <bpmn2:target>_It3NwASzEeqd1c1oPl_MIg</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
